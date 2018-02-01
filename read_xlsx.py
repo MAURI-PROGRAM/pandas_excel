@@ -1,5 +1,8 @@
+#importar pandas
 import pandas as pd
-import xlrd
 
-df=pd.read_excel(open('hoja.xlsx','rb'), sheet_name='Sheet1')
-print(df.columns)
+#leer el archivo y la hoja
+df=pd.read_excel(open('archivo.xlsx','rb'), sheet_name='Sheet1')
+
+#presentar lo que se leyo del .xlsx
+print(df)
