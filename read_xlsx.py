@@ -5,4 +5,4 @@ import pandas as pd
 df=pd.read_excel(open('archivo.xlsx','rb'), sheet_name='Sheet1')
 
 #presentar lo que se leyo del .xlsx
-print(df)
+print(df).
