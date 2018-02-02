@@ -13,5 +13,7 @@ pysqldf = lambda q: sqldf(q, globals())
 print(df)
 
 #manejo de sql con dataframe
-print (pysqldf("SELECT id,sum(valores) as saldo_tl,count(*) as n_multas,min(dias) as min_dia,max(dias) as max_dia  FROM df group by id;").head())
+print(pysqldf("SELECT id,sum(valores) as saldo_tl,count(*) as n_multas,min(dias) as min_dia,max(dias) as max_dia  FROM df group by id;"))
 
+#estadisticos con dataframe
+print(df[['valores','dias']].describe())
