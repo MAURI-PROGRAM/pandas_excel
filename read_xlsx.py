@@ -10,7 +10,7 @@ df=pd.read_excel(open('archivo.xlsx','rb'), sheet_name='Asignacion')
 pysqldf = lambda q: sqldf(q, globals())
 
 
-#manejo de sql con dataframe
+#manejo de sql con dataframe y pandasql
 presentacion1=pysqldf("SELECT SUBCAMPANAPORCLIENTE as fase,sum(SALDO)as valor,round(sum(SALDO)/(select sum(SALDO)FROM df),2) as porcentaje_valor,count(*) as asignados  FROM df group by SUBCAMPANAPORCLIENTE order by valor desc;")
 print(presentacion1)
 
